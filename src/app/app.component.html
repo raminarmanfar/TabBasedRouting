@@ -1,0 +1,10 @@
+<div style="padding: 0px;">
+    <h1>Angular Material 2 Tab Example using md-tab-nav-bar and md-tab-link.</h1>
+
+    <nav mat-tab-nav-bar>
+        <a mat-tab-link *ngFor="let routeLink of routeLinks; let i = index;" [active]="activeLinkIndex === i" [routerLink]="routeLink.link" routerLinkActive="mat-tab-link-active" #rla="routerLinkActive" (click)="activeLinkIndex = i" [routerLinkActiveOptions]="{exact: true}">
+        {{routeLink.label}}
+      </a>
+    </nav>
+    <router-outlet></router-outlet>
+</div>
